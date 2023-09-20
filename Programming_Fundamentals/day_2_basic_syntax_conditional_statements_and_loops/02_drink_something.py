@@ -6,6 +6,6 @@ elif ages <= 18:
     drink = "coke"
 elif ages <= 21:
     drink = "beer"
-else:  # ages > 21
+else:
     drink = "whisky"
 print(f"drink {drink}")
