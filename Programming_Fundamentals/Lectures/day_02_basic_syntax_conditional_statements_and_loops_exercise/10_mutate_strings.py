@@ -9,10 +9,7 @@ for char_index in range(len(first_string)):
         print(finished_string)
         last_string = finished_string
 
-for curr_index in range(len(first_string)):
-    left_side = second_string[:curr_index + 1]
-    right_side = first_string[curr_index + 1::]
-    print(f'{left_side}{right_side}')# first_string = input()                               lecturer's solution
+# first_string = input()                               lecturer's solution
 # second_string = input()
 # last_printed_string = first_string
 # for character_index in range(len(first_string)):
