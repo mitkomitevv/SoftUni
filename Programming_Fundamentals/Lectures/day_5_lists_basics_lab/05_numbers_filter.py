@@ -5,13 +5,13 @@ for _ in range(n):
     num = int(input())
     my_list.append(num)
 command = input()
-for nums in my_list:
-    if command == 'even' and nums % 2 == 0:
-        filtered_list.append(nums)
-    elif command == 'odd' and nums % 2 != 0:
-        filtered_list.append(nums)
-    elif command == 'negative' and nums < 0:
-        filtered_list.append(nums)
-    elif command == 'positive' and nums >= 0:
-        filtered_list.append(nums)
+for number in my_list:
+    if command == 'even' and number % 2 == 0:
+        filtered_list.append(number)
+    elif command == 'odd' and number % 2 != 0:
+        filtered_list.append(number)
+    elif command == 'negative' and number < 0:
+        filtered_list.append(number)
+    elif command == 'positive' and number >= 0:
+        filtered_list.append(number)
 print(filtered_list)
