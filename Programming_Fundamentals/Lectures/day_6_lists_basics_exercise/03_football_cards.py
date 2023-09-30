@@ -12,10 +12,7 @@ for current_card in cards_list:
     if current_card in team_b_list:
         team_b_list.remove(current_card)
         team_b -= 1
-    if team_a == 6:
-        flag = True
-        break
-    elif team_b == 6:
+    if team_a == 6 or team_b == 6:
         flag = True
         break
 print(f'Team A - {team_a}; Team B - {team_b}')
