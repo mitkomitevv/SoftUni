@@ -3,7 +3,7 @@ def smallest(n1, n2, n3):
     return smallest_number
 
 
-n_1 = int(input())
-n_2 = int(input())
-n_3 = int(input())
-print(smallest(n_1, n_2, n_3))
+first_number = int(input())
+second_number = int(input())
+third_number = int(input())
+print(smallest(first_number, second_number, third_number))
