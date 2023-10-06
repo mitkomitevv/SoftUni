@@ -1,18 +1,14 @@
-number = input()
-
-
-def result():
-    # even_sum = [x for x in range(number) if x % 2 == 0]
-    # odd_sum = [x for x in range(number) if x % 2 != 0]
+def result(num_as_string: str):
     even_sum = 0
     odd_sum = 0
-    for i in range(len(number)):
-        if int(number[i]) % 2 == 0:
-            even_sum += int(number[i])
-        elif int(number[i]) % 2 == 1:
-            odd_sum += int(number[i])
+    for num in num_as_string:
+        if int(num) % 2 == 0:
+            even_sum += int(num)
+        else:
+            odd_sum += int(num)
+    return odd_sum, even_sum
 
-    print(f'Odd sum = {odd_sum}, Even sum = {even_sum}')
 
-
-result()
+number = input()
+odd_final_sum, even_final_sum = result(number)
+print(f'Odd sum = {odd_final_sum}, Even sum = {even_final_sum}')
