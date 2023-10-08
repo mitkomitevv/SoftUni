@@ -16,24 +16,20 @@ while input_line != 'end':
 
     elif 'max' in command:
         if 'odd' in command and odd_numbers:
-            max_odd = max(odd_numbers)
-            max_odd_i = len(data) - data[::-1].index(max_odd) - 1
+            max_odd_i = len(data) - data[::-1].index(max(odd_numbers)) - 1
             print(max_odd_i)
         elif 'even' in command and even_numbers:
-            max_even = max(even_numbers)
-            max_even_i = len(data) - data[::-1].index(max_even) - 1
+            max_even_i = len(data) - data[::-1].index(max(even_numbers)) - 1
             print(max_even_i)
         else:
             print('No matches')
 
     elif 'min' in command:
         if 'odd' in command and odd_numbers:
-            min_odd = min(odd_numbers)
-            min_odd_i = len(data) - data[::-1].index(min_odd) - 1
+            min_odd_i = len(data) - data[::-1].index(min(odd_numbers)) - 1
             print(min_odd_i)
         elif 'even' in command and even_numbers:
-            min_even = min(even_numbers)
-            min_even_i = len(data) - data[::-1].index(min_even) - 1
+            min_even_i = len(data) - data[::-1].index(min(even_numbers)) - 1
             print(min_even_i)
         else:
             print('No matches')
