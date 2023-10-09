@@ -1,7 +1,5 @@
 def train(num):
-    train_list = []
-    for _ in range(num):
-        train_list.append(0)
+    train_list = [0] * num
     input_line = input()
     while input_line != 'End':
         command = input_line.split()
