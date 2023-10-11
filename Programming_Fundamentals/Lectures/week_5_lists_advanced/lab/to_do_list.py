@@ -10,7 +10,6 @@ while task != 'End':
         task = input()
     for int_element in list1:
         int_element[0] = int(int_element[0])
-    # list1 = [int(sublist[0]) for sublist in list1] Can't make it work
     list1 = sorted(list1)
     for element in list1:
         del element[0]
