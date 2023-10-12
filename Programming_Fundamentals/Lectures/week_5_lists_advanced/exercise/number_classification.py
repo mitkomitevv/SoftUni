@@ -1,12 +1,12 @@
 def classification(numbers):
-    positive = [int(x) for x in numbers if int(x) >= 0]
-    negative = [int(x) for x in numbers if int(x) < 0]
-    even = [int(x) for x in numbers if int(x) % 2 == 0]
-    odd = [int(x) for x in numbers if int(x) % 2 != 0]
-    return f"Positive: {', '.join(map(str, positive))}\n" \
-           f"Negative: {', '.join(map(str, negative))}\n" \
-           f"Even: {', '.join(map(str, even))}\n" \
-           f"Odd: {', '.join(map(str, odd))}"
+    positive = [x for x in numbers if int(x) >= 0]
+    negative = [x for x in numbers if int(x) < 0]
+    even = [x for x in numbers if int(x) % 2 == 0]
+    odd = [x for x in numbers if int(x) % 2 != 0]
+    return f"Positive: {', '.join(positive)}\n" \
+           f"Negative: {', '.join(negative)}\n" \
+           f"Even: {', '.join(even)}\n" \
+           f"Odd: {', '.join(odd)}"
 
 
 input_line = input().split(', ')
