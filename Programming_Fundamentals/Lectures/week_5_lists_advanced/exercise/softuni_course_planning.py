@@ -19,16 +19,15 @@ while line2 != 'course start':
             lesson1_i = schedule.index(command[1])
             lesson2_i = schedule.index(command[2])
             schedule[lesson1_i], schedule[lesson2_i] = schedule[lesson2_i], schedule[lesson1_i]
-            if f'{command[1]}-Exercise' in schedule:
-                for_insert = schedule.index(command[1])
-                schedule.remove(f'{command[1]}-Exercise')
-                schedule.insert(for_insert, f'{command[1]}-Exercise')
-            elif f'{command[2]}-Exercise' in schedule:
-                for_insert = schedule.index(command[2])
-                schedule.remove(f'{command[2]}-Exercise')
-                schedule.insert(for_insert + 1, f'{command[2]}-Exercise')
+            for lesson_name, lesson_index in zip([command[1], command[2]], [lesson1_i, lesson2_i]):
+                if f"{lesson_name}-Exercise" in schedule:
+                    schedule.remove(f"{lesson_name}-Exercise")
+                    if lesson_index < schedule.index(lesson_name):
+                        schedule.insert(schedule.index(lesson_name), f"{lesson_name}-Exercise")
+                    else:
+                        schedule.insert(schedule.index(lesson_name) + 1, f"{lesson_name}-Exercise")
     elif 'Exercise' in command:
-        if command[1] in schedule and 'Exercise' not in schedule:
+        if command[1] in schedule and f'{command[1]}-Exercise' not in schedule:
             lesson_i = schedule.index(command[1])
             schedule.insert(lesson_i + 1, f'{command[1]}-Exercise')
         else:
