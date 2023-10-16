@@ -17,4 +17,3 @@ if flag:
     print(f'Not enough energy! Game ends with {won} won battles and {energy} energy')
 else:
     print(f'Won battles: {won}. Energy left: {energy}')
-    
