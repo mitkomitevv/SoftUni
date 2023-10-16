@@ -9,9 +9,8 @@ while strings[0] != 'end':
             or int(strings[1]) >= len(elements_sequence) or int(strings[0]) == int(strings[1]):
         middle = len(elements_sequence) // 2
         left, right = elements_sequence[:middle], elements_sequence[middle:]
-        left.append(f"-{moves}a")
-        left.append(f"-{moves}a")
-        elements_sequence = left + right
+        element_insert = f'-{moves}a'
+        elements_sequence = left + [element_insert] + [element_insert] + right
         print('Invalid input! Adding additional elements to the board')
     elif elements_sequence[int(strings[0])] == elements_sequence[int(strings[1])]:
         print(f'Congrats! You have found matching elements - {elements_sequence[int(strings[0])]}!')
