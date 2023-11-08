@@ -7,7 +7,6 @@ while input_line != 'end of contests':
 
 input_line2 = input()
 valid_contests = {}
-list_with_contests = []
 while input_line2 != 'end of submissions':
     contest, password, username, points = input_line2.split('=>')
     points = int(points)
@@ -25,5 +24,16 @@ while input_line2 != 'end of submissions':
 
     input_line2 = input()
 
+best_candidate = 0
+best_key = None  # Variable to store the key of the dictionary with the highest sum
+
+for key, value_dict in valid_contests.items():
+    max_candidate = sum(value_dict.values())
+    if max_candidate > best_candidate:
+        best_candidate = max_candidate
+        best_key = key 
+
+print(f"Best candidate is {best_key} with total {best_candidate} points.")
 
 
+x = {'Tanya': {'C# Fundamentals': 350, 'Algorithms': 380, 'Part One Interview': 220, 'JS Fundamentals': 400}, 'Nikola': {'Part One Interview': 120, 'C# Fundamentals': 200}}
