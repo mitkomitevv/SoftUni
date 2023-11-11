@@ -1,6 +1,5 @@
-string_list = input().split()
+str1, str2 = input().split()
 total_sum = 0
-str1, str2 = string_list[0], string_list[1]
 num1, num2 = 0, 0
 while True:
     for char in str1:
