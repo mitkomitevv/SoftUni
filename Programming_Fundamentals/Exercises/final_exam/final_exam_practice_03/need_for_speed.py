@@ -11,9 +11,9 @@ def drive(dictionary_cars, vehicle, distance, gas):
 
 def refuel(dictionary_cars, vehicle, gas):
     if dictionary_cars[vehicle][1] + gas > 75:
-        gas_refueled = 75 - dictionary_cars[vehicle][1]
+        gas = 75 - dictionary_cars[vehicle][1]
         dictionary_cars[vehicle][1] = 75
-        return dictionary_cars, gas_refueled
+        return dictionary_cars, gas
     dictionary_cars[vehicle][1] += gas
     return dictionary_cars, gas
 
