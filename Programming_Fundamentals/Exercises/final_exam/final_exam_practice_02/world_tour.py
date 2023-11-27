@@ -21,15 +21,13 @@ def main():
         if command == 'Add Stop':
             idx, string = int(input_line[1]), input_line[2]
             stops = add(stops, idx, string)
-            print(stops)
         elif command == 'Remove Stop':
             start, end = int(input_line[1]), int(input_line[2])
             stops = remove(stops, start, end)
-            print(stops)
         elif command == 'Switch':
             old_string, new_string = input_line[1], input_line[2]
             stops = switch(stops, old_string, new_string)
-            print(stops)
+        print(stops)
         input_line = input().split(':')
 
     print(f"Ready for world tour! Planned stops: {stops}")
