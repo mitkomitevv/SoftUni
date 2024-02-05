@@ -41,8 +41,7 @@ else:
 healing_items = sorted(healing_items.items(), key=lambda x: (-x[1], x[0]))
 [print(f"{item_name} - {amount_created}") for item_name, amount_created in healing_items if amount_created > 0]
 if medications:
-    medications.reverse()
-    print(f"Medicaments left: {', '.join(str(x) for x in medications)}")
+    print(f"Medicaments left: {', '.join(str(x) for x in reversed(medications))}")
 if textiles:
     print(f"Textiles left: {', '.join(str(x) for x in textiles)}")
 
